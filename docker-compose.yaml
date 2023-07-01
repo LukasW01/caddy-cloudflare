@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   caddy:
-    image: ghcr.io/lukasw01/caddy-cloudflare:latest
+    image: ghcr.io/lukasw01/caddy-cloudflare:main
     restart: unless-stopped
     container_name: caddy
     networks:
