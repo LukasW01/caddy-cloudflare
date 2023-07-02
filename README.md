@@ -17,7 +17,7 @@ The `Caddyfile` contains the server configurations and routes for your web serve
 
 ### Docker Compose
 
-The docker-compose.yml file defines the service for the custom Caddy build. You can customize this file to suit your needs. By default, it uses the latest image from GitHub Packages, but you can modify it to use a different image source or version. An [example](https://github.com/LukasW01/caddy-cloudflare/blob/main/docker-compose.yaml) `docker-compose` file is also provided in this repository.
+The `docker-compose.yml` file defines the service for the custom Caddy build. You can customize this file to suit your needs. By default, it uses the latest image from GitHub Packages, but you can modify it to use a different image source or version. An [example](https://github.com/LukasW01/caddy-cloudflare/blob/main/docker-compose.yaml) `docker-compose` file is also provided in this repository.
 
 ```yaml
 version: '3.7'
