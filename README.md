@@ -10,7 +10,7 @@ The `Caddyfile` contains the server configurations and routes for your web serve
 
 ```caddyfile
 {
-    #CDN-ACME
+    #ACME_DNS
     acme_dns cloudflare <api-key>
 }
 ```

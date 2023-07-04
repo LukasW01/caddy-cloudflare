@@ -21,7 +21,7 @@
 }
 
 {
-    #CDN-ACME
+    #ACME_DNS
     acme_dns cloudflare <api-key>
     #Metrics
     servers {
