@@ -6,7 +6,7 @@ This repository contains a custom build of Caddy, a powerful, enterprise-ready a
 
 ### Caddyfile
 
-The `Caddyfile` contains the server configurations and routes for your web server. Modify this file according to your specific requirements. For refrences how the Caddyfile works take a look at the offical [documentation](https://caddyserver.com/docs/). An [example](https://github.com/LukasW01/caddy-cloudflare/blob/main/Caddyfile) Caddyfile is provided in this repository.
+The `Caddyfile` contains the server configurations and routes for your web server. Modify this file according to your specific requirements. For refrences how the Caddyfile works take a look at the offical [documentation](https://caddyserver.com/docs/).
 
 ```caddyfile
 {
@@ -17,7 +17,7 @@ The `Caddyfile` contains the server configurations and routes for your web serve
 
 ### Docker Compose
 
-The `docker-compose.yaml` file defines the service for the custom Caddy build. You can customize this file to suit your needs. By default, it uses the latest image from GitHub Packages, but you can modify it to use a different image source or version. An [example](https://github.com/LukasW01/caddy-cloudflare/blob/main/docker-compose.yaml) docker-compose file is also provided in this repository.
+The `docker-compose.yaml` file defines the service for the custom Caddy build. You can customize this file to suit your needs. By default, it uses the latest image from GitHub Packages, but you can modify it to use a different image source or version. 
 
 ```yaml
 version: '3.7'
@@ -32,7 +32,6 @@ services:
     ports:
         - "80:80"
         - "443:443"
-        - "2019:2019"
     volumes:
         - ./Caddyfile:/etc/caddy/Caddyfile:ro
         - ./data:/data
