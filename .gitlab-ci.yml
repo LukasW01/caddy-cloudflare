@@ -18,5 +18,5 @@ docker-build:
         - docker:dind
     script:
         - docker build --pull -t "$IMAGE_NAME" .
-        - docker push "$IMAGE_NAME:latest"
-        - docker push "$IMAGE_NAME:main"
+        - docker push "$REGISTRY/$IMAGE_NAME:latest"
+        - docker push "$REGISTRY/$IMAGE_NAME:main"
