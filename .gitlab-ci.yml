@@ -1,0 +1,22 @@
+image: docker:cli
+
+stages:
+  - build
+
+variables:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: $PROJECT_NAMESPACE/$PROJECT_NAME
+
+before_script:
+  - docker login $REGISTRY -u $REGISTRY_USER -p $REGISTRY_PASSWORD 
+
+docker-build:
+    stage: build
+    only: 
+        - schedules
+    services:
+        - docker:dind
+    script:
+        - docker build --pull -t "$DOCKER_IMAGE_NAME" .
+        - docker push "$DOCKER_IMAGE_NAME:latest"
+        - docker push "$DOCKER_IMAGE_NAME:main"
