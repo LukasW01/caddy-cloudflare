@@ -9,9 +9,30 @@ This repository contains a custom build of Caddy, a powerful, enterprise-ready a
 The `Caddyfile` contains the server configurations and routes for your web server. Modify this file according to your specific requirements. For refrences how the Caddyfile works take a look at the offical [documentation](https://caddyserver.com/docs/).
 
 ```caddyfile
+# Global Caddy Config
 {
     #ACME_DNS
     acme_dns cloudflare <api-key>
+    # WebDAVi
+    order webdav before file_server
+}
+
+#WebDAV example:
+webdav.example.com {
+        @notget not method GET
+       	route @notget {
+       	      basicauth {
+       	           <USER> <BASE-64 HASH>
+       	      }
+       	      webdav {
+       	           root /usr/share/
+       	      }
+        }
+
+	encode gzip
+
+        import header
+        import logs
 }
 ```
 
@@ -24,7 +45,7 @@ version: '3.7'
 
 services:
   caddy:
-    image: ghcr.io/lukasw01/caddy-cloudflare:main
+    image: ghcr.io/lukasw01/caddy-cloudflare:latest
     restart: unless-stopped
     container_name: caddy
     networks:
