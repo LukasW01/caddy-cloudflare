@@ -10,7 +10,7 @@ This project only supports the latest version of the software. We strongly encou
 
 ## Responsible Disclosure Policy
 
-We take security seriously and are committed to working with responsible security researchers to identify and resolve security vulnerabilities. If you have found a security vulnerability, we kindly ask that you follow our responsible disclosure policy:
+We take security seriously and are committed to working with you to identify and resolve security vulnerabilities. If you have found a security vulnerability, we kindly ask that you follow our responsible disclosure policy:
 
     Do not publicly disclose the vulnerability before we have had a chance to address it.
     Provide us with a reasonable amount of time to fix the vulnerability before any public disclosure.
@@ -19,6 +19,3 @@ We take security seriously and are committed to working with responsible securit
 
 We will acknowledge receipt of your report within 24 hours and will send you a more detailed response within 72 hours.
 
-## Acknowledgments
-
-We would like to extend our gratitude to the security researchers who have helped make our project more secure. Your contributions are appreciated and valued.

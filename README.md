@@ -11,10 +11,10 @@ The `Caddyfile` contains the server configurations and routes for your web serve
 ```caddyfile
 # Global Caddy Config
 {
-    #ACME_DNS
-    acme_dns cloudflare <api-key>
-    # WebDAVi
-    order webdav before file_server
+        #ACME_DNS
+        acme_dns cloudflare <api-key>
+        # WebDAV
+        order webdav before file_server
 }
 
 #WebDAV example:
@@ -29,7 +29,7 @@ webdav.example.com {
        	      }
         }
 
-	encode gzip
+	      encode gzip
 
         import header
         import logs
